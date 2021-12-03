@@ -96,43 +96,43 @@ function tambah(){
         return;
       }
     }
+
+    let tambah = `
+      <tr id="baris${counter}">
+        <td id="kd_pemain${counter}">
+          ${kode}
+          <button id="edit-kode${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
+            Edit
+          </button>
+        </td>
+        <td id="nama_pemain${counter}">
+          ${nama}
+          <button id="edit-nama${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
+            Edit
+          </button>
+        </td>
+        <td id="email_pemain${counter}">
+          ${email}
+          <button id="edit-email${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
+            Edit
+          </button>
+        </td>
+        <td id="posisi_pemain${counter}">
+          ${posisi}
+          <button id="edit-posisi${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
+            Edit
+          </button>
+        </td>
+        <td class="btn">
+          <button id="hapus-btn" class="${counter}" onclick="hapus(this.getAttribute('class'))">Hapus</button>
+        </td>
+      </tr>
+    `;
+
+    counter++;
+
+    daftarPemain.innerHTML += tambah;
   } // Last of if(konfirmasi)
-
-  let tambah = `
-    <tr id="baris${counter}">
-      <td id="kd_pemain${counter}">
-        ${kode}
-        <button id="edit-kode${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
-          Edit
-        </button>
-      </td>
-      <td id="nama_pemain${counter}">
-        ${nama}
-        <button id="edit-nama${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
-          Edit
-        </button>
-      </td>
-      <td id="email_pemain${counter}">
-        ${email}
-        <button id="edit-email${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
-          Edit
-        </button>
-      </td>
-      <td id="posisi_pemain${counter}">
-        ${posisi}
-        <button id="edit-posisi${counter}" class="${counter} edit-btn" onclick="edit(this.getAttribute('id'), this.getAttribute('class'))">
-          Edit
-        </button>
-      </td>
-      <td class="btn">
-        <button id="hapus-btn" class="${counter}" onclick="hapus(this.getAttribute('class'))">Hapus</button>
-      </td>
-    </tr>
-  `;
-
-  counter++;
-
-  daftarPemain.innerHTML += tambah;
 }
 
 function hapus(namaClass){
