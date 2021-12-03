@@ -63,9 +63,9 @@ function tambah(){
         if(email == ""){
           window.alert("Tidak boleh kosong!");
         }
-        // else if(ValidateEmail(email) == false){
-        //   window.alert("Kamu memasukkan email yang tidak valid!");
-        // }
+        else if(ValidateEmail(email) == false){
+          window.alert("Kamu memasukkan email yang tidak valid!");
+        }
         else if(email.length > 25){
           window.alert("Email lebih dari 25 karakter!");
         }else{
@@ -86,9 +86,9 @@ function tambah(){
         if(posisi == ""){
           window.alert("Tidak boleh kosong!");
         }
-        // else if(posisi != "Mid" && posisi != "Top" && posisi != "ADC" && posisi != "Support" && posisi != "Jungle" && posisi != "Substitute"){
-        //   window.alert("Posisi tidak ada di pilihan!");
-        // }
+        else if(posisi != "Mid" && posisi != "Top" && posisi != "ADC" && posisi != "Support" && posisi != "Jungle" && posisi != "Substitute"){
+          window.alert("Posisi tidak ada di pilihan!");
+        }
         else{
           isValid = true;
         }
